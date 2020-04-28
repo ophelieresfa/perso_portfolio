@@ -1,4 +1,5 @@
-perso_portfolio
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bd473935b0cc49fe959b1ede68de0022)](https://www.codacy.com/manual/ophelieresfa/perso_portfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ophelieresfa/perso_portfolio&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0d6edd75413e758dd615/maintainability)](https://codeclimate.com/github/ophelieresfa/perso_portfolio/maintainability)
 
 Voici le projet numéro 5 de ma formation Développeur Web Junior.
 
