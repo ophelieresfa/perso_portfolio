@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controller\Extention;
+namespace App\Controller\Extension;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
-class Extention extends AbstractExtension
+class Extension extends AbstractExtension
 {
     public function getFunctions()
     {
