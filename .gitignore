@@ -1,4 +1,4 @@
 .idea/
-composer.phar
 public/node_modules/
 vendor/
+config/db.php
