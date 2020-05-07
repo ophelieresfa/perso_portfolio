@@ -94,6 +94,36 @@ body {
     font-size: 1.1rem;
 }
 
+/* Home Page */
+
+.container {
+    border: rgba(31, 28, 24, 0.6) 1px solid;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.25), 1em 0 .4em rgba(0, 0, 0, 0.5);
+    width: 50%;
+}
+
+.home h1 {
+    text-decoration: underline #8e134a;
+    background: -webkit-linear-gradient(#8e134a, #1f1c18);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.home img {
+    display: flex;
+    margin: 2rem auto;
+    border: #1f1c18 1px solid;
+    width: 75%;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    color: black;
+    background-color: black;
+}
+
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
