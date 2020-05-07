@@ -4,6 +4,58 @@ body {
 
 /* Class for colors (background and text)  */
 
+.sin-city-red {
+    background: linear-gradient(to right, #ED213A, #93291E);
+}
+
+.namn {
+    background: linear-gradient(to right, #a73737, #7a2828);
+}
+
+.citrus-‡eel {
+    background: linear-gradient(to right, #FDC830, #F37335);
+}
+
+.brokhea {
+    background: linear-gradient(to left, #d9a7c7, #fffcdc);
+}
+
+.orange-punk {
+    background: linear-gradient(to right, #E44D26, #F16529);
+}
+
+.crimson-tide {
+    background: linear-gradient(to right, #642b73, #c6426e);
+}
+
+.pinky {
+    background: linear-gradient(to bottom, #f89999, #f6c0ba);
+}
+
+.vanusa {
+    background: linear-gradient(to right, #DA4453, #89216B);
+}
+
+.bighead {
+    background: linear-gradient(to right, #c94b4b, #4b134f);
+}
+
+.alive {
+    background: linear-gradient(to left, #cb356b, #bd3f32);
+}
+
+.purpink {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.portrait {
+    background: linear-gradient(to left, #c31432, #240b36);
+}
+
+.shifter {
+    background: linear-gradient(#bc556f, #f9a470);
+}
+
 .bg-purple {
     background-color: #721b65;
 }
