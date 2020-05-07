@@ -1,8 +1,60 @@
 body {
-    background-color: rgba(167, 167, 167, 0.55);
+    background-color: #eed5c5;
 }
 
 /* Class for colors (background and text)  */
+
+.sin-city-red {
+    background: linear-gradient(to right, #ED213A, #93291E);
+}
+
+.namn {
+    background: linear-gradient(to right, #a73737, #7a2828);
+}
+
+.citrus-‡eel {
+    background: linear-gradient(to right, #FDC830, #F37335);
+}
+
+.brokhea {
+    background: linear-gradient(to left, #d9a7c7, #fffcdc);
+}
+
+.orange-punk {
+    background: linear-gradient(to right, #E44D26, #F16529);
+}
+
+.crimson-tide {
+    background: linear-gradient(to right, #642b73, #c6426e);
+}
+
+.pinky {
+    background: linear-gradient(to bottom, #f89999, #f6c0ba);
+}
+
+.vanusa {
+    background: linear-gradient(to right, #DA4453, #89216B);
+}
+
+.bighead {
+    background: linear-gradient(to right, #c94b4b, #4b134f);
+}
+
+.alive {
+    background: linear-gradient(to left, #cb356b, #bd3f32);
+}
+
+.purpink {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.portrait {
+    background: linear-gradient(to left, #c31432, #240b36);
+}
+
+.shifter {
+    background: linear-gradient(#bc556f, #f9a470);
+}
 
 .bg-purple {
     background-color: #721b65;
@@ -42,10 +94,88 @@ body {
     font-size: 1.1rem;
 }
 
+/* Home Page */
+
+.container {
+    border: rgba(31, 28, 24, 0.6) 1px solid;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.25), 1em 0 .4em rgba(0, 0, 0, 0.5);
+    width: 50%;
+}
+
+.home h1 {
+    text-decoration: underline #8e134a;
+    background: -webkit-linear-gradient(#8e134a, #1f1c18);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.home img {
+    display: flex;
+    margin: 2rem auto;
+    border: #1f1c18 1px solid;
+    width: 75%;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    color: black;
+    background-color: black;
+}
+
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
     .navbar-brand {
         display: none;
     }
+
+    .home img {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home img {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .columns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home img {
+        width: 40%;
+    }
+
+    .container {
+        width: 20rem;
+    }
+
+    .home p {
+        width: 50%;
+        margin: auto;
+    }
+
+    .home ul {
+        width: 50%;
+        margin-left: 23%;
+    }
+
+    hr {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home img {
+        width: 30%;
+    }
+
 }
