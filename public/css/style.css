@@ -2,6 +2,40 @@ body {
     background-color: rgba(167, 167, 167, 0.55);
 }
 
+/* Class for colors (background and text)  */
+
+.bg-purple {
+    background-color: #721b65;
+}
+
+.text-purple {
+    color: #721b65;
+}
+
+.bg-pink {
+    background-color: #b80d57;
+}
+
+.text-pink {
+    color: #b80d57;
+}
+
+.bg-orange {
+    background-color: #f8615a;
+}
+
+.text-orange {
+    color: #f8615a;
+}
+
+.bg-yellow {
+    background-color: #ffd868;
+}
+
+.text-yellow {
+    color: #ffd868;
+}
+
 /* Properties for title */
 
 .title {
