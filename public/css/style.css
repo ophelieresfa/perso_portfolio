@@ -143,7 +143,36 @@ hr {
 }
 
 @media screen and (min-width: 992px) {
+    .columns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home img {
+        width: 40%;
+    }
+
+    .container {
+        width: 20rem;
+    }
+
+    .home p {
+        width: 50%;
+        margin: auto;
+    }
+
+    .home ul {
+        width: 50%;
+        margin-left: 23%;
+    }
+
+    hr {
+        width: 50%;
+    }
 }
+
 @media screen and (min-width: 1200px) {
     }
 }
