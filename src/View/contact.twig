@@ -1,0 +1,33 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Contact{% endblock %}
+
+{% block description %}Si vous avez une question ou un problème, utilisez le formulaire le contact pour envoyer un message.{% endblock %}
+
+{% block main %}
+    <main>
+        <section>
+            <h1>À propos</h1>
+            <p>Vous souhaitez un devis ou simplement des renseignements ?</p>
+            <p>Contactez-moi directement sur ce formulaire.</p>
+
+            <form  method="post" action="">
+                <label for="name">Votre nom* :</label>
+                <input name="name" type="text" placeholder="Nom" required>
+
+                <label for="firstname">Votre prénom* :</label>
+                <input name="firstname" type="text" placeholder="Prénom" required>
+
+                <label for="email">Votre adresse de messagerie* :</label>
+                <input name="email" class="email" type="email" placeholder="Email" required>
+                <label for="subject">Sujet* :</label>
+                <input name="subject" type="text" placeholder="Sujet" required>
+
+                <label for="content">Votre message* :</label>
+                <textarea name="content" cols="18" rows="5" placeholder="Message" required></textarea>
+
+                <input name="submit" type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+{% endblock %}
