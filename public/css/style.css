@@ -1,4 +1,14 @@
-/* Properties for screens that have a minimum width of 768px */
+body {
+    background-color: rgba(167, 167, 167, 0.55);
+}
+
+/* Properties for title */
+
+.title {
+    font-size: 1.1rem;
+}
+
+/* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
     .navbar-brand {
