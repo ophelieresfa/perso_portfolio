@@ -1,113 +1,58 @@
-body {
-    background-color: #eed5c5;
+.rob-cond {
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* Class for colors (background and text)  */
-
-.sin-city-red {
-    background: linear-gradient(to right, #ED213A, #93291E);
-}
-
-.namn {
-    background: linear-gradient(to right, #a73737, #7a2828);
-}
-
-.citrus-‡eel {
-    background: linear-gradient(to right, #FDC830, #F37335);
-}
-
-.brokhea {
-    background: linear-gradient(to left, #d9a7c7, #fffcdc);
-}
-
-.orange-punk {
-    background: linear-gradient(to right, #E44D26, #F16529);
-}
-
-.crimson-tide {
-    background: linear-gradient(to right, #642b73, #c6426e);
-}
-
-.pinky {
-    background: linear-gradient(to bottom, #f89999, #f6c0ba);
-}
-
-.vanusa {
-    background: linear-gradient(to right, #DA4453, #89216B);
-}
-
-.bighead {
-    background: linear-gradient(to right, #c94b4b, #4b134f);
-}
-
-.alive {
-    background: linear-gradient(to left, #cb356b, #bd3f32);
-}
-
-.purpink {
-    background: linear-gradient(to right, #7f00ff, #e100ff);
-}
-
-.portrait {
-    background: linear-gradient(to left, #c31432, #240b36);
-}
-
-.shifter {
-    background: linear-gradient(#bc556f, #f9a470);
-}
-
-.bg-purple {
-    background-color: #721b65;
-}
-
-.text-purple {
-    color: #721b65;
+.bg-black {
+    background-color: #313131;
 }
 
 .bg-pink {
-    background-color: #b80d57;
+    background-color: #7c003c;
 }
 
 .text-pink {
-    color: #b80d57;
+    color: #7c003c;
 }
 
-.bg-orange {
-    background-color: #f8615a;
+.border-gray {
+    border-top: 2px solid rgba(224, 224, 224, 0.5);
 }
 
-.text-orange {
-    color: #f8615a;
+/* Properties for Header */
+
+header h1 {
+    padding: 4rem 0;
 }
 
-.bg-yellow {
-    background-color: #ffd868;
+header a {
+    color: white;
 }
 
-.text-yellow {
-    color: #ffd868;
+header a:hover {
+    text-decoration: none;
+    color: #888888;
 }
 
-/* Properties for title */
+/* Properties for Navigation Menu */
 
-.title {
-    font-size: 1.1rem;
+nav button {
+    margin: 0 auto 1rem auto;
 }
 
-/* Home Page */
-
-.container {
-    border: rgba(31, 28, 24, 0.6) 1px solid;
-    box-shadow: 6px 6px rgba(0, 0, 0, 0.25), 1em 0 .4em rgba(0, 0, 0, 0.5);
-    width: 50%;
+nav ul a {
+    border-top: 2px solid rgba(224, 224, 224, 0.5);
 }
+
+nav button a:hover,
+nav ul a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* Properties for Home page  */
 
 .home h1 {
-    text-decoration: underline #8e134a;
-    background: -webkit-linear-gradient(#8e134a, #1f1c18);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: underline;
 }
 
 .home img {
@@ -117,65 +62,110 @@ body {
     width: 75%;
 }
 
-hr {
-    height: 2px;
-    border: 0;
-    color: black;
-    background-color: black;
+.home p span {
+    font-weight: bold;
+}
+
+.home p {
+    width: 80%;
+    margin: auto;
+}
+
+.home ul {
+    margin-left: 10%;
+}
+
+.part2 {
+    padding-top: 2rem;
 }
 
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
-    .navbar-brand {
-        display: none;
-    }
-
-    .home img {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .home img {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .columns {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .home img {
-        width: 40%;
-    }
-
-    .container {
-        width: 20rem;
-    }
-
-    .home p {
-        width: 50%;
+    /* Properties for Navigation Menu */
+    nav ul {
         margin: auto;
     }
 
-    .home ul {
-        width: 50%;
-        margin-left: 23%;
-    }
-
-    hr {
-        width: 50%;
+    nav ul a {
+        border-top: none;
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .home img {
-        width: 30%;
+/* Properties for screen with min-width 768px */
+
+@media screen and (min-width: 768px) {
+
+    body {
+        margin: 2rem auto 0 auto;
+        display: flex;
     }
 
+    /* Properties for Header */
+
+    header {
+        padding-top: 4rem;
+        margin-left: 2rem;
+    }
+
+    header hr {
+        display: none;
+    }
+
+    .col {
+        flex-basis: 0;
+        flex-grow: 0;
+    }
+
+    /* Properties for Navigation Menu */
+
+    nav {
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column !important;
+        margin: 0;
+        width: 15rem;
+    }
+
+    /* Properties for Home Page */
+
+    .home section {
+        margin:auto!important;
+    }
+}
+
+/* Properties for screen with min-width 992px */
+
+@media screen and (min-width: 992px) {
+
+    /* Properties for Header */
+
+    header{
+        padding-top: 4rem;
+        margin-left: 5rem;
+    }
+
+    /* Properties for Main */
+
+    main {
+        width: 40rem;
+        margin: auto;
+    }
+
+    /* Properties for Home Page */
+
+    .home p {
+        width: 100%;
+    }
+}
+
+/* Properties for screen with min-width 1200px */
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding-top: 4rem;
+        margin-left: 5rem;
+    }
 }

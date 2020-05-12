@@ -1,27 +1,26 @@
-<nav class="navbar alive navbar-expand-sm navbar-light">
-    <a class="navbar-brand" href="#">Menu</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<nav class="navbar alive navbar-expand-sm">
+    <button class="navbar-toggler text-uppercase text-pink" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="text-pink" href="#">Menu</a> <i class="fas fa-long-arrow-alt-down text-pink"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('home') }}">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-pink" href="{{ url('home') }}">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-pink" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Portfolio
                 </a>
                 <div class="dropdown-menu alive" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item alive" href="{{ url('design') }}">Créations Design</a>
-                    <a class="dropdown-item alive" href="{{ url('development') }}">Créations Développement</a>
+                    <a class="dropdown-item alive text-pink" href="{{ url('design') }}">Créations Design</a>
+                    <a class="dropdown-item alive text-pink" href="{{ url('development') }}">Créations Développement</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('about') }}">À propos</a>
+                <a class="nav-link text-pink" href="{{ url('about') }}">À propos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                <a class="nav-link text-pink" href="{{ url('contact') }}">Contact</a>
             </li>
         </ul>
     </div>

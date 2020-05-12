@@ -5,18 +5,14 @@
 {% block description %}Page d'accueil de mon site internet. Bienvenue sur mon site internet. Je suis développeur web et designer...{% endblock %}
 
 {% block main %}
-    <main class="home">
-        <section class="text-center container-fluid">
-            <div class="columns">
-                <img src="css/img/Ophers.jpg" alt="Photo de Ophélie RESFA">
-                <div class="container pinky my-5">
-                    <h1 class="mt-1 pb-1">Qui suis-je ?</h1>
-                </div>
-            </div>
-            <p class="alive text-white p-2">Bonjour !</p>
-            <p class="text-center">Je m’appelle Ophélie RESFA, j’ai 24 ans et je suis passionnée par l’informatique depuis des années.</p>
-            <p class="bg-dark text-white p-2">Ma spécialité est surtout le Web Design :</p>
-            <ul class="text-left text-purple">
+    <main>
+        <section class="column home text-center">
+            <h1 class="rob-cond text-pink text-uppercase pt-4">Qui suis-je ?</h1>
+            <img src="css/img/Ophers.jpg" alt="Photo de Ophélie RESFA">
+            <p class="bg-pink text-white p-4"><span>B</span>onjour !</p>
+            <p class="mt-4">Je m’appelle Ophélie RESFA, j’ai 24 ans et je suis passionnée par l’informatique depuis des années.</p>
+            <p class="bg-black text-white mt-4 p-4"><span>M</span>a spécialité est surtout le Web Design :</p>
+            <ul class="mt-4 text-left text-pink">
                 <li>
                     Création de logos.
                 </li>
@@ -33,18 +29,20 @@
                     Etc..
                 </li>
             </ul>
-            <p class="bg-dark text-white p-2">Mais aussi le Web Développement :</p>
-            <ul class="text-left text-purple">
-                <li>
+            <p class="bg-black text-white mt-4 p-4"><span>M</span>ais aussi le Web Développement :</p>
+            <ul class="mt-4 text-left text-pink">
+                <li class="pb-4">
                     Création de sites internet.
                 </li>
             </ul>
-            <hr>
-            <p>En effet comme je le disais plus haut je suis une passionnée.</p>
+            <p class="part2 border-gray">En effet comme je le disais plus haut je suis une passionnée.</p>
+            <br>
             <p>Après une année de Faculté d’ingénieur informatique mon coeur s’est tourné vers la programmation informatique.</p>
+            <br>
             <p>J’ai donc décidé de me former et de me diplômer en tant que Développeur Web Junior Full Stack. Je continue à côté de ça à prendre un énorme plaisir à faire des créations de design.
             </p>
-            <p class="alive text-white p-2">Vous pouvez voir certaines de mes réalisations sur mon portfolio.</p>
+            <br>
+            <p class="bg-pink text-white p-4 mb-4">Vous pouvez voir certaines de mes réalisations sur mon portfolio.</p>
         </section>
     </main>
 {% endblock %}
