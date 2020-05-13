@@ -6,27 +6,37 @@
 
 {% block main %}
     <main>
-        <section>
-            <h1>À propos</h1>
-            <p>Vous souhaitez un devis ou simplement des renseignements ?</p>
-            <p>Contactez-moi directement sur ce formulaire.</p>
+        <section class="contact column about text-center mb-5">
+        <h1 class="rob-cond text-pink text-uppercase pt-4">Contact</h1>
+            <p class="mt-5">Vous souhaitez un devis ou simplement des renseignements ?</p>
+            <p class="mt-4 bg-black text-white p-4 mb-4">Contactez-moi directement sur ce formulaire.</p>
 
-            <form  method="post" action="">
-                <label for="name">Votre nom* :</label>
-                <input name="name" type="text" placeholder="Nom" required>
+            <form class="bg-pink pb-5"  method="post" action="">
+                <div class="form-group pt-5">
+                    <label class="text-white" for="name">Votre nom* :</label>
+                    <input class="form-control " name="name" type="text" placeholder="Nom" required>
+                </div>
 
-                <label for="firstname">Votre prénom* :</label>
-                <input name="firstname" type="text" placeholder="Prénom" required>
+                <div class="form-group">
+                    <label class="text-white" for="firstname">Votre prénom* :</label>
+                    <input class="form-control" name="firstname" type="text" placeholder="Prénom" required>
+                </div>
 
-                <label for="email">Votre adresse de messagerie* :</label>
-                <input name="email" class="email" type="email" placeholder="Email" required>
-                <label for="subject">Sujet* :</label>
-                <input name="subject" type="text" placeholder="Sujet" required>
+                <div class="form-group">
+                    <label class="text-white" for="email">Votre adresse de messagerie* :</label>
+                    <input class="form-control" name="email" class="email" type="email" placeholder="Email" required>
+                </div>
 
-                <label for="content">Votre message* :</label>
-                <textarea name="content" cols="18" rows="5" placeholder="Message" required></textarea>
+                <div class="form-group">
+                    <label class="text-white" for="subject">Sujet* :</label>
+                    <input class="form-control" name="subject" type="text" placeholder="Sujet" required>
+                </div>
+                <div class="form-group">
+                    <label class="text-white" for="content">Votre message* :</label>
+                    <textarea class="form-control" name="content" cols="18" rows="5" placeholder="Message" required></textarea>
+                </div>
 
-                <input name="submit" type="submit" value="Envoyer">
+                <input class="text-uppercase text-white bg-black p-2" name="submit" type="submit" value="Envoyer">
             </form>
         </section>
     </main>
