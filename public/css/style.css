@@ -159,6 +159,11 @@ main p {
     .cv {
         width: 30rem;
     }
+
+    main {
+        width: 40rem;
+        margin: auto;
+    }
 }
 
 /* Properties for screen with min-width 992px */
