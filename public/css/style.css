@@ -92,6 +92,19 @@ main p {
     width: 25rem;
 }
 
+/* Properties for Contact Page */
+
+.contact form {
+    width: 80%;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 50%;
+    margin: auto;
+}
+
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
@@ -186,8 +199,9 @@ main p {
 
     /* Properties for Home Page */
 
-    main p {
-        width: 100%;
+    main p,
+    .contact form {
+        width: 90%;
     }
 
     /* Properties for About page */
