@@ -81,12 +81,15 @@ main p {
     padding-top: 2rem;
 }
 
-.home ul {
-    margin-left: 10%;
+/* Properties for About Page */
+
+.why {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-.part2 {
-    padding-top: 2rem;
+.cv {
+    width: 25rem;
 }
 
 /* Properties for screen with min-width 576px */
@@ -99,6 +102,12 @@ main p {
 
     nav ul a {
         border-top: none;
+    }
+
+    /* Properties for About page */
+
+    .cv {
+        width: 30rem;
     }
 }
 
@@ -144,6 +153,12 @@ main p {
     .home section {
         margin:auto!important;
     }
+
+    /* Properties for About page */
+
+    .cv {
+        width: 30rem;
+    }
 }
 
 /* Properties for screen with min-width 992px */
@@ -168,6 +183,12 @@ main p {
 
     main p {
         width: 100%;
+    }
+
+    /* Properties for About page */
+
+    .cv {
+        width: 40rem;
     }
 }
 
