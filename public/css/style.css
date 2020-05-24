@@ -81,6 +81,23 @@ main p {
     padding-top: 2rem;
 }
 
+/* Properties for Design Page */
+
+.design h2 {
+    width: 94%;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.link-fox {
+    text-decoration: underline black;
+    color: black;
+}
+
+.link-fox:hover {
+    color: #787878;
+}
+
 /* Properties for About Page */
 
 .why {
