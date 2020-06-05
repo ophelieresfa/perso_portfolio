@@ -83,7 +83,8 @@ main p {
 
 /* Properties for Design Page */
 
-.design h2 {
+.design h2,
+.development h2 {
     width: 94%;
     margin: auto;
     font-size: 1.5rem;
@@ -97,6 +98,21 @@ main p {
 .link-fox:hover {
     color: #787878;
 }
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+    margin-top: 20%;
+}
+
+.carousel-control-prev {
+    margin-left: 27%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+}
+
 
 /* Properties for About Page */
 
