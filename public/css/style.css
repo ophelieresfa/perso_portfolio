@@ -18,6 +18,10 @@
     border-top: 2px solid rgba(224, 224, 224, 0.5);
 }
 
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
 /* Properties for Header */
 
 header h1 {
@@ -98,6 +102,7 @@ main p {
 .link-fox:hover {
     color: #787878;
 }
+
 .carousel-control-next,
 .carousel-control-prev {
     filter: invert(100%);
@@ -161,7 +166,7 @@ main p {
 
 @media screen and (min-width: 768px) {
 
-    body {
+    .colonne {
         margin: 2rem auto 0 auto;
         display: flex;
     }
