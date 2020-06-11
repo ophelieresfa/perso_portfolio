@@ -6,4 +6,3 @@ function submitForm() {
     quote.submitForm();
 }
 quote.nextForm();
-quote.useData();
