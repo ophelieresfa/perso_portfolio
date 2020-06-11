@@ -1,0 +1,40 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Devis gratuit{% endblock %}
+
+{% block description %}Demander votre devis gratuit... Rentrer les informations demandées. {% endblock %}
+
+{% block main %}
+    <main>
+        <section class="devis text-center mb-6">
+            <h1 class="rob-cond text-pink text-uppercase pt-4">Devis gratuit</h1>
+            <div class="fond-form-1 container" id="fond-form-1">
+                <form id="form" class="p-4">
+                        <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+
+                        <div class="form-group mt-5">
+                            <label for="name">Entrez votre nom</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="NOM" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="firstname">Entrez votre Prénom</label>
+                            <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Prénom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Entrez votre mail</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="exemple.email@gmail.com" required>
+                        </div>
+
+                        <!--<div class="form-group">
+                            <small class="text-pink" id="alert">Veuillez remplir tous les champs</small>
+                        </div>-->
+
+                    <button id="btn-devis" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
