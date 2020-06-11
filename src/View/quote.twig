@@ -27,11 +27,34 @@
                             <input type="email" name="email" class="form-control" id="email" placeholder="exemple.email@gmail.com" required>
                         </div>
 
-                        <!--<div class="form-group">
-                            <small class="text-pink" id="alert">Veuillez remplir tous les champs</small>
-                        </div>-->
-
                     <button id="btn-devis" class="btn-devis btn bg-black text-white mt-4" type="submit" onsubmit="return addDatas()">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-2 container" id="fond-form-2">
+                <form class="p-4">
+                    <p id="datas" class="mt-5"></p>
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+
+                    <div class="form-group mt-5">
+                        <label for="selection">Vous avez besoin :</label>
+                        <select id="selection" class="form-control">
+                            <option value="">Voir la liste ...</option>
+                            <optgroup label="D'une création graphique">
+                                <option value="">Logo</option>
+                                <option value="">Carte de visite</option>
+                                <option value="">Affiche / Affiche publicitaire</option>
+                                <option value="">Pochette d'album</option>
+                                <option value="">Header / Bannière</option>
+                                <option value="">Curriculum Vitae</option>
+                            </optgroup>
+                            <optgroup label="D'une création de site internet">
+                                <option value="">Site internet</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <button class="btn-devis btn bg-black text-white mt-4" type="button">Suivant</button>
                 </form>
             </div>
         </section>
