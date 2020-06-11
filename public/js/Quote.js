@@ -11,9 +11,9 @@ class Quote {
         });
 
         function submitForm() {
-            let name = $("#name").val();
-            let firstname = $("#firstname").val();
-            let email = $("#email").val();
+            let name = document.getElementById('name').value;
+            let firstname = document.getElementById('firstname').value;
+            let email = document.getElementById('email').value;
             let datas = new FormData();
 
             datas.append("name", name);
@@ -26,26 +26,26 @@ class Quote {
         }
     }
 
-   nextForm() {
-        let button    = document.getElementById("btn-devis");
-        let name     = document.getElementById("name");
-        let firstname = document.getElementById("firstname");
-        let email = document.getElementById("email");
+    nextForm() {
+        let button = document.getElementById("btn-devis");
         let backForm1 = document.getElementById("fond-form-1");
         let backForm2 = document.getElementById("fond-form-2");
 
         button.addEventListener('click', function () {
-            if ((name.value !== "")) {
-                if ((firstname.value !== "")) {
-                    if ((email.value !== "")) {
-                        backForm1.style.display = "none";
-                        backForm2.style.display = "block";
-
-                        localStorage.setItem('name', name.value);
-                        localStorage.setItem('firstname', firstname.value);
-                    }
-                }
-            }
+            backForm1.style.display = "none";
+            backForm2.style.display = "block";
         });
     }
+
+     useData() {
+         let datas = document.getElementById("datas");
+         let name = document.getElementById('name').value;
+         let firstname = document.getElementById('firstname').value;
+
+         function strUcFirst(a){
+             return (a+'').charAt(0).toUpperCase()+a.substr(1);
+         }
+
+         datas.innerText = "Bonjour " + strUcFirst(name) + " " + strUcFirst(firstname) + ","
+     }
 }
