@@ -27,7 +27,7 @@
                             <input type="email" name="email" class="form-control" id="email" placeholder="exemple.email@gmail.com" required>
                         </div>
 
-                    <button id="btn-devis" class="btn-devis btn bg-black text-white mt-4" type="submit" onsubmit="return addDatas()">Suivant</button>
+                    <button id="btn-devis" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
                 </form>
             </div>
 
@@ -38,18 +38,18 @@
 
                     <div class="form-group mt-5">
                         <label for="selection">Vous avez besoin :</label>
-                        <select id="selection" class="form-control">
+                        <select name="selection" id="selection" class="form-control">
                             <option value="">Voir la liste ...</option>
                             <optgroup label="D'une création graphique">
-                                <option value="">Logo</option>
-                                <option value="">Carte de visite</option>
-                                <option value="">Affiche / Affiche publicitaire</option>
-                                <option value="">Pochette d'album</option>
-                                <option value="">Header / Bannière</option>
-                                <option value="">Curriculum Vitae</option>
+                                <option value="1">Logo</option>
+                                <option value="2">Carte de visite</option>
+                                <option value="3">Affiche / Affiche publicitaire</option>
+                                <option value="4">Pochette d'album</option>
+                                <option value="5">Header / Bannière</option>
+                                <option value="6">Curriculum Vitae</option>
                             </optgroup>
                             <optgroup label="D'une création de site internet">
-                                <option value="">Site internet</option>
+                                <option value="7">Site internet</option>
                             </optgroup>
                         </select>
                     </div>
@@ -59,5 +59,10 @@
             </div>
         </section>
     </main>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/Quote.js"></script>
+    <script src="js/script.js"></script>
 {% endblock %}
+
 
