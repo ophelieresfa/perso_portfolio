@@ -32,30 +32,28 @@ class Quote {
         let backForm2 = document.getElementById("fond-form-2");
 
         button.addEventListener('click', function () {
+            let email = document.getElementById('email').value;
+            let datas = document.getElementById("datas");
             let name = document.getElementById('name').value;
             let firstname = document.getElementById('firstname').value;
-            let email = document.getElementById('email').value;
 
             if (name !== "") {
                 if (firstname !== "") {
                     if (email !== "") {
+                        let name = document.getElementById('name').value;
+                        let firstname = document.getElementById('firstname').value;
+
                         backForm1.style.display = "none";
                         backForm2.style.display = "block";
+
+                        function strUcFirst(a){
+                            return (a+'').charAt(0).toUpperCase()+a.substr(1);
+                        }
+
+                        datas.innerText = "Bonjour " + strUcFirst(name) + " " + strUcFirst(firstname) + ",";
                     }
                 }
             }
         });
     }
-
-     useData() {
-         let datas = document.getElementById("datas");
-         let name = document.getElementById('name').value;
-         let firstname = document.getElementById('firstname').value;
-
-         function strUcFirst(a){
-             return (a+'').charAt(0).toUpperCase()+a.substr(1);
-         }
-
-         datas.innerText = "Bonjour " + strUcFirst(name) + " " + strUcFirst(firstname) + ","
-     }
 }
