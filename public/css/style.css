@@ -143,6 +143,29 @@ main p {
     margin: auto;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 55px;
+    border-top: 2px solid white;
+}
+
+.modal a {
+    text-decoration: none;
+}
+
+.modal-footer button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black !important;
+}
+
+.modal-footer button:hover a{
+    color: #7c003c !important;
+}
+
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
