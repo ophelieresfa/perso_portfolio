@@ -166,6 +166,16 @@ main p {
     color: #7c003c !important;
 }
 
+.fond-form-1 {
+    margin-top: 3rem;
+    border: 1px solid #f9f9f9;
+    border-radius: 20px;
+    height: 30rem;
+    width: 80%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px 5px #ededed;
+}
+
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
