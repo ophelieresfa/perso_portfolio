@@ -20,7 +20,7 @@ class Quote {
             datas.append("firstname", firstname);
             datas.append("email", email);
 
-            ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote!data", datas, function (reponse) {
+            ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote!data", datas, function () {
                 console.log("Name = " + name + ", Firstname = " + firstname + ", Email = " + email);
             });
         }
@@ -32,8 +32,18 @@ class Quote {
         let backForm2 = document.getElementById("fond-form-2");
 
         button.addEventListener('click', function () {
-            backForm1.style.display = "none";
-            backForm2.style.display = "block";
+            let name = document.getElementById('name').value;
+            let firstname = document.getElementById('firstname').value;
+            let email = document.getElementById('email').value;
+
+            if (name !== "") {
+                if (firstname !== "") {
+                    if (email !== "") {
+                        backForm1.style.display = "none";
+                        backForm2.style.display = "block";
+                    }
+                }
+            }
         });
     }
 
