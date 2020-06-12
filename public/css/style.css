@@ -169,7 +169,8 @@ main p {
 /**/
 
 .fond-form-1,
-.fond-form-2 {
+.fond-form-2,
+.fond-form-3 {
     margin-top: 3rem;
     border: 1px solid #f9f9f9;
     border-radius: 20px;
@@ -179,7 +180,8 @@ main p {
     box-shadow: 0 0 10px 5px #ededed;
 }
 
-.fond-form-2 {
+.fond-form-2,
+.fond-form-3 {
     display: none;
 }
 

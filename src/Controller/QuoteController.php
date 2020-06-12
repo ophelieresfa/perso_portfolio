@@ -16,13 +16,15 @@ class QuoteController extends MainController
         $name = $_POST["name"];
         $firstname = $_POST["firstname"];
         $email = $_POST["email"];
+        $about = $_POST["about"];
 
-        echo $name . " " . $firstname . " " . $email;
+        echo $name . " " . $firstname . " " . $email . " " . $about;
 
         if (!empty($_POST)) {
             $data['name'] = $_POST['name'];
             $data['firstname'] = $_POST['firstname'];
             $data['email'] = $_POST['email'];
+            $data['about'] = $_POST['about'];
 
             ModelFactory::getModel('Quote')->createData($data);
 
