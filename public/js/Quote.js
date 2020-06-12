@@ -5,7 +5,7 @@ class Quote {
     constructor() {
         this.form_1 = document.getElementById('form-1');
         this.form_2 = document.getElementById('form-2');
-        this.form_3 = document.getElementById('form-3');
+        this.form_last = document.getElementById('form-last');
 
         this.form_1.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -17,7 +17,7 @@ class Quote {
             this.submitForm();
         });
 
-        this.form_3.addEventListener("submit", (e) => {
+        this.form_last.addEventListener("submit", (e) => {
             e.preventDefault();
             this.sendQuote();
         });
@@ -66,7 +66,7 @@ class Quote {
         let button_2 = document.getElementById("btn-devis-2");
         let backForm1 = document.getElementById("fond-form-1");
         let backForm2 = document.getElementById("fond-form-2");
-        let backForm3 = document.getElementById("fond-form-3");
+        let backFormlast = document.getElementById("fond-form-last");
 
         button_1.addEventListener('click', function () {
             let email = document.getElementById('email').value;
@@ -95,7 +95,7 @@ class Quote {
 
         button_2.addEventListener('click', function () {
             backForm2.style.display = "none";
-            backForm3.style.display = "block";
+            backFormlast.style.display = "block";
         });
     }
 
