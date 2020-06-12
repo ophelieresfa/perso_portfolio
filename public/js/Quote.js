@@ -3,26 +3,32 @@
 
 class Quote {
     constructor() {
-        let form = document.getElementById('form');
+        this.form_1 = document.getElementById('form-1');
 
-        form.addEventListener("submit", (e) => {
+        this.form_1.addEventListener("submit", (e) => {
             e.preventDefault();
-            submitForm();
+            this.submitForm1();
         });
+    }
 
-        function submitForm() {
-            let name = document.getElementById('name').value;
-            let firstname = document.getElementById('firstname').value;
-            let email = document.getElementById('email').value;
-            let datas = new FormData();
+    submitForm1() {
+        let name = document.getElementById('name').value;
+        let firstname = document.getElementById('firstname').value;
+        let email = document.getElementById('email').value;
+        let datas = new FormData();
 
-            datas.append("name", name);
-            datas.append("firstname", firstname);
-            datas.append("email", email);
+        if (name !== "") {
+            if (firstname !== "") {
+                if (email !== "") {
+                    datas.append("name", name);
+                    datas.append("firstname", firstname);
+                    datas.append("email", email);
 
-            ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote!data", datas, function () {
-                console.log("Name = " + name + ", Firstname = " + firstname + ", Email = " + email);
-            });
+                    ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote!data", datas, function () {
+                        console.log("Name = " + name + ", Firstname = " + firstname + ", Email = " + email);
+                    });
+                }
+            }
         }
     }
 
