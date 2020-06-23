@@ -22,6 +22,27 @@
     margin-bottom: 6rem;
 }
 
+/* Mask arrow input number */
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+    -o-appearance: none;
+    margin:0
+}
+
 /* Properties for Header */
 
 header h1 {
@@ -169,7 +190,19 @@ main p {
 /**/
 
 .fond-form-1,
-.fond-form-2 {
+.fond-form-2,
+.fond-form-3,
+.fond-form-4,
+.fond-form-5,
+.fond-form-6,
+.fond-form-7,
+.fond-form-8,
+.fond-form-9,
+.fond-form-10,
+.fond-form-11,
+.fond-form-12,
+.fond-form-13,
+.fond-form-last {
     margin-top: 3rem;
     border: 1px solid #f9f9f9;
     border-radius: 20px;
@@ -179,10 +212,29 @@ main p {
     box-shadow: 0 0 10px 5px #ededed;
 }
 
-.fond-form-2 {
+.fond-form-2,
+.fond-form-3,
+.fond-form-4,
+.fond-form-5,
+.fond-form-6,
+.fond-form-7,
+.fond-form-8,
+.fond-form-9,
+.fond-form-10,
+.fond-form-11,
+.fond-form-12,
+.fond-form-13,
+.fond-form-last {
     display: none;
 }
 
+#about {
+    text-decoration: underline solid black;
+}
+
+.what {
+    display: none;
+}
 
 /* Properties for screen with min-width 576px */
 

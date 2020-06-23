@@ -9,7 +9,7 @@
         <section class="devis text-center mb-6">
             <h1 class="rob-cond text-pink text-uppercase pt-4">Devis gratuit</h1>
             <div class="fond-form-1 container" id="fond-form-1">
-                <form id="form" class="p-4">
+                <form id="form-1" class="p-4">
                         <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
 
                         <div class="form-group mt-5">
@@ -27,18 +27,18 @@
                             <input type="email" name="email" class="form-control" id="email" placeholder="exemple.email@gmail.com" required>
                         </div>
 
-                    <button id="btn-devis" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                    <button id="btn-devis-1" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
                 </form>
             </div>
 
             <div class="fond-form-2 container" id="fond-form-2">
-                <form class="p-4">
-                    <p id="datas" class="mt-5"></p>
+                <form id="form-2" class="p-4">
+                    <p id="datas" class="mt-3 mb-3"></p>
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
 
                     <div class="form-group mt-5">
                         <label for="selection">Vous avez besoin :</label>
-                        <select name="selection" id="selection" class="form-control">
+                        <select name="selection" id="selection" class="form-control" required>
                             <option value="">Voir la liste ...</option>
                             <optgroup label="D'une création graphique">
                                 <option value="1">Logo</option>
@@ -47,14 +47,208 @@
                                 <option value="4">Pochette d'album</option>
                                 <option value="5">Header / Bannière</option>
                                 <option value="6">Curriculum Vitae</option>
+                                <option value="7">Autre</option>
                             </optgroup>
                             <optgroup label="D'une création de site internet">
-                                <option value="7">Site internet</option>
+                                <option value="8">Site internet</option>
                             </optgroup>
                         </select>
+                        <div id="what" class="form-group what mt-5">
+                            <label for="what">De quoi avez-vous besoin ?</label>
+                            <input type="text" name="what" class="form-control" id="what" placeholder="Ex: Plaquette entreprise" required>
+                        </div>
                     </div>
 
-                    <button class="btn-devis btn bg-black text-white mt-4" type="button">Suivant</button>
+                    <button id="btn-devis-2" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-3 container" id="fond-form-3">
+                <form id="form-3" class="p-4">
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group">
+                        <p class="mt-5 mb-3">Vous souhaitez :</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="refonte" required value="refonte">Refonte d'un logo déjà existant</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="creation" required value="création">Création d'un nouveau logo</label>
+                    </div>
+                    <button id="btn-devis-3" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-4 container" id="fond-form-4">
+                <form id="form-4" class="p-4">
+                    <small class="mt-3">Vous avez choisi : </small>
+                    <p id="about" class="mt-3"></p>
+                    <div class="form-group mt-3">
+                        <p id="quality" class="pt-5"></p>
+                    <label class="radio-inline m-3"><input class="m-3" type="radio" name="quality" value="oui" required>Oui</label>
+                    <label class="radio-inline m-3"><input class="m-3" type="radio" name="quality" value="non" required>Non</label>
+                    </div>
+                    <button id="btn-devis-4" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-5 container" id="fond-form-5">
+                <form id="form-5" class="p-4">
+                    <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <label for="budget" class="mb-5">Quel est votre budget ?</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="device">€</span>
+                            </div>
+                            <input type="number" class="form-control" id="budget" min="0" max="5000" placeholder="Ex: 200" aria-describedby="device" required>
+                        </div>
+                        <button id="btn-devis-5" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="fond-form-6 container" id="fond-form-6">
+                <form id="form-6" class="p-4">
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <label for="details">Détaillez toutes les informations supplémentaire</label>
+                        <input type="text" name="details" class="form-control" id="details" placeholder="Ex: couleur du logo">
+                    </div>
+                    <button id="btn-devis-6" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-7 container" id="fond-form-7">
+                <form id="form-7" class="p-4">
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group">
+                        <p class="mt-5 mb-3">Vous souhaitez :</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="recto" required value="refonte">Recto</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="rectoverso" required value="création">Recto / Verso</label>
+                    </div>
+                    <button id="btn-devis-7" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-8 container" id="fond-form-8">
+                <form id="form-8" class="p-4">
+                    <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <label for="unity" class="mb-5">Nombre d'affiche(s) :</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="unity" min="1" max="10" placeholder="Ex: 3" required>
+                        </div>
+                        <button id="btn-devis-8" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="fond-form-9 container" id="fond-form-9">
+                <form id="form-9" class="p-4">
+                    <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <p class="mt-5 mb-3">Vous souhaitez une pochette d'album pour version :</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="version" id="numerique" required value="Numérique">Numérique</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="version" id="papier" required value="Papier">Papier</label>
+                    </div>
+                    <button id="btn-devis-9" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-10 container" id="fond-form-10">
+                <form id="form-10" class="p-4">
+                    <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <p class="mt-5 mb-3">Pour quels réseaux sociaux avez-vous besoin d'un(e) header / bannière ?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Facebook</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Twitter</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Instagram</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Youtube</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">LinkedIn</label>
+                        </div>
+                    </div>
+                    <button id="btn-devis-10" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-11 container" id="fond-form-11">
+                <form id="form-11" class="p-4">
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group">
+                        <p class="mt-5 mb-3">Vous souhaitez :</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="type" id="vitrine" required value="vitrine">Un site vitrine</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="type" id="commerce" required value="commerce">Un site e-commerce</label>
+                    </div>
+                    <button id="btn-devis-11" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-12 container" id="fond-form-12">
+                <form id="form-12" class="p-4">
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <label for="exampleFormControlSelect1">Nombre de page(s)</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1 à 5 pages</option>
+                            <option>5 à 10 pages</option>
+                            <option>10 à 15 pages</option>
+                            <option>15 à 20 pages</option>
+                            <option>+20 pages</option>
+                        </select>
+                    </div>
+                    <button id="btn-devis-12" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-13 container" id="fond-form-13">
+                <form id="form-13" class="p-4">
+                    <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group mt-5">
+                        <p class="mt-5 mb-3">Quelle(s) fonctionalités souhaitez-vous ?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Barre de recherche</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Caroussel / Slider</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Carte Google Map</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Formulaire de contact</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Menu</label>
+                        </div>
+                    </div>
+                    <button id="btn-devis-13" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
+                </form>
+            </div>
+
+            <div class="fond-form-last container" id="fond-form-last">
+                <form id="form-last" class="p-4">
+                    <small>Voici un récapitulatif de votre demande de devis :</small>
+                    <p>Nom:</p>
+                    <p>Prénom</p>
+                    <p>Email</p>
+                    <p>About</p>
+                    <button id="btn-devis-last" class="btn-devis btn bg-black text-white mt-4" type="submit">Envoyer la demande de devis</button>
                 </form>
             </div>
         </section>
