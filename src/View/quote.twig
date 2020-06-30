@@ -33,10 +33,10 @@
 
             <div class="fond-form-2 container" id="fond-form-2">
                 <form id="form-2" class="p-4">
-                    <p id="datas" class="mt-3 mb-3"></p>
+                    <p id="datas" class="mt-2 mb-5"></p>
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
 
-                    <div class="form-group mt-5">
+                    <div class="form-group mt-5 selection">
                         <label for="selection">Vous avez besoin :</label>
                         <select name="selection" id="selection" class="form-control" required>
                             <option value="">Voir la liste ...</option>
@@ -53,53 +53,69 @@
                                 <option value="8">Site internet</option>
                             </optgroup>
                         </select>
+
                         <div id="what" class="form-group what mt-5">
                             <label for="what">De quoi avez-vous besoin ?</label>
-                            <input type="text" name="what" class="form-control" id="what" placeholder="Ex: Plaquette entreprise" required>
+                            <input type="text" name="what" class="form-control" id="what-value" placeholder="Ex: Plaquette entreprise" required>
                         </div>
                     </div>
 
-                    <button id="btn-devis-2" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                    <button id="btn-devis-2" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
                 </form>
             </div>
 
             <div class="fond-form-3 container" id="fond-form-3">
                 <form id="form-3" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-3"></p>
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
-                    <div class="form-group">
-                        <p class="mt-5 mb-3">Vous souhaitez :</p>
-                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="refonte" required value="refonte">Refonte d'un logo déjà existant</label>
-                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="creation" required value="création">Création d'un nouveau logo</label>
+                    <div class="form-group creation">
+                        <p class="mt-5 mb-4">Vous souhaitez :</p>
+                        <div class="form-group text-left">
+                            <input class="m-3" type="radio" name="creation" id="refonte" required value="refonte">
+                            <label id="ref" class="radio-inline m-3"></label>
+                        </div>
+                        <div class="form-group text-left">
+                            <input class="m-3" type="radio" name="creation" id="creation" required value="creation">
+                            <label id="crea" class="radio-inline m-3"></label>
+                        </div>
                     </div>
-                    <button id="btn-devis-3" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                    <button id="btn-devis-3" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
                 </form>
             </div>
 
             <div class="fond-form-4 container" id="fond-form-4">
                 <form id="form-4" class="p-4">
-                    <small class="mt-3">Vous avez choisi : </small>
-                    <p id="about" class="mt-3"></p>
-                    <div class="form-group mt-3">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-4"></p>
+                    <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <div class="form-group quality">
                         <p id="quality" class="pt-5"></p>
-                    <label class="radio-inline m-3"><input class="m-3" type="radio" name="quality" value="oui" required>Oui</label>
-                    <label class="radio-inline m-3"><input class="m-3" type="radio" name="quality" value="non" required>Non</label>
+                        <div class="form-group text-left mt-3">
+                            <label class="radio-inline m-3"><input class="m-3" type="radio" name="quality" value="oui" required>Oui</label>
+                        </div>
+                        <div class="form-group text-left">
+                            <label class="radio-inline m-3"><input class="m-3" type="radio" name="quality" value="non" required>Non</label>
+                        </div>
                     </div>
-                    <button id="btn-devis-4" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                    <button id="btn-devis-4" class="btn-devis btn bg-black text-white mt-2" type="submit">Suivant</button>
                 </form>
             </div>
 
             <div class="fond-form-5 container" id="fond-form-5">
                 <form id="form-5" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-5"></p>
                     <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group mt-5">
                         <label for="budget" class="mb-5">Quel est votre budget ?</label>
-                        <div class="input-group">
+                        <div class="input-group mb-5">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="device">€</span>
                             </div>
                             <input type="number" class="form-control" id="budget" min="0" max="5000" placeholder="Ex: 200" aria-describedby="device" required>
                         </div>
-                        <button id="btn-devis-5" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                        <button id="btn-devis-5" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
                     </div>
                 </form>
             </div>
@@ -107,21 +123,87 @@
             <div class="fond-form-6 container" id="fond-form-6">
                 <form id="form-6" class="p-4">
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
+                    <p class="mt-4 please">Veuillez répondre aux questions qui sont et pourraient être utiles.</p>
+                    <p class="mt-4 choice">Vous avez choisi : </p>
+                    <p class="mt-2" id="about-form-6"></p>
                     <div class="form-group mt-5">
-                        <label for="details">Détaillez toutes les informations supplémentaire</label>
-                        <input type="text" name="details" class="form-control" id="details" placeholder="Ex: couleur du logo">
+                        <label for="activity">Pour quel type d'activité ?*</label>
+                        <input type="text" name="name" class="form-control" id="activity" placeholder="Ex: Salon de coiffure" required>
                     </div>
-                    <button id="btn-devis-6" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
+                    <div id="mark-name" class="form-group name-mark">
+                        <p id="display-mark" class="mt-5 mb-3"></p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="mark" id="mark-yes" required value="Yes">Oui</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="mark" id="mark-no" required value="No">Non</label>
+                    </div>
+
+                    <div class="form-group mt-3 mb-5 mark-name" id="mark-name">
+                        <label for="name-mark">Nom de la marque:*</label>
+                        <input type="text" name="name-mark" class="form-control" id="name-mark" placeholder="Ex: Ophers" required>
+                    </div>
+                    <div id="colors">
+                        <p>Quelle(s) couleur(s) ou quelle(s) tonalité(s) aimez-vous ?</p>
+                        <div class="mt-3 color">
+                            <label for="textcolor">Selectioner une couleur</label>
+                            <input class="form-control ml-5 mt-1" type="color" value="#000000" name="textcolor">
+                        </div>
+                        <div class="color">
+                            <label for="textcolor">Selectioner une couleur</label>
+                            <input class="form-control ml-5 mt-1" type="color" value="#000000" name="textcolor">
+                        </div>
+                        <div class="color">
+                            <label for="textcolor">Selectioner une couleur</label>
+                            <input class="form-control ml-5 mt-1" type="color" value="#000000" name="textcolor">
+                        </div>
+                        <div class="color">
+                            <label for="textcolor">Selectioner une couleur</label>
+                            <input class="form-control ml-5 mt-1" type="color" value="#000000" name="textcolor">
+                        </div>
+                        <div class="color">
+                            <label for="textcolor">Selectioner une couleur</label>
+                            <input class="form-control ml-5 mt-1" type="color" value="#000000" name="textcolor">
+                        </div>
+                    </div>
+                    <div class="form-group keep" id="keep">
+                        <p class="mt-5 mb-3">Désirez-vous conserver des éléments du logo existant ?*</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="keep" id="keep-yes" required value="Yes">Oui</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="keep" id="keep-no" required value="No">Non</label>
+                    </div>
+                    <div class="form-group integrate" id="integrate-part">
+                        <p id="integrate" class="mt-5 mb-3"></p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="integrate" id="integrate-yes" required value="Yes">Oui</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="integrate" id="integrate-no" required value="No">Non</label>
+                    </div>
+                    <div class="form-group mt-3 mb-5 what-integrate" id="what-integrate">
+                        <label for="integrate-what">Quel(s) éléments souhaitez-vous ?*</label>
+                        <input type="text" name="integrate-what" class="form-control" id="integrate-what" placeholder="Ex: Chevelure et un peigne" required>
+                    </div>
+                    <div>
+                        <label id="date" for="party"></label>
+                        <input type="date" id="party" name="party" required>
+                    </div>
+                    <div id="identity" class="form-group identity">
+                    <p class="mt-5 mb-3"> Possédez-vous déjà une identité visuelle ?</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="identity" id="identity-yes" required value="Yes">Oui</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="identity" id="identity-no" required value="No">Non</label>
+                    </div>
+                    <div class="form-group site">
+                        <p id="need" class="mt-5 mb-3">Avez-vous besoin d'un site internet ?</p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="site" id="site-yes" required value="Yes">Oui</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="site" id="site-no" required value="No">Non</label>
+                    </div>
+                    <button id="btn-devis-6" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
                 </form>
             </div>
 
             <div class="fond-form-7 container" id="fond-form-7">
                 <form id="form-7" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-7"></p>
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group">
-                        <p class="mt-5 mb-3">Vous souhaitez :</p>
-                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="recto" required value="refonte">Recto</label>
-                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="creation" id="rectoverso" required value="création">Recto / Verso</label>
+                        <p id="rec" class="mt-5 mb-3"></p>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="recto" id="recto" required value="recto">Recto</label>
+                        <label class="radio-inline m-3"><input class="m-3" type="radio" name="recto" id="rectoverso" required value="recto-verso">Recto / Verso</label>
                     </div>
                     <button id="btn-devis-7" class="btn-devis btn bg-black text-white mt-4" type="submit">Suivant</button>
                 </form>
@@ -129,6 +211,8 @@
 
             <div class="fond-form-8 container" id="fond-form-8">
                 <form id="form-8" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-8"></p>
                     <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group mt-5">
                         <label for="unity" class="mb-5">Nombre d'affiche(s) :</label>
@@ -142,6 +226,8 @@
 
             <div class="fond-form-9 container" id="fond-form-9">
                 <form id="form-9" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-9"></p>
                     <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group mt-5">
                         <p class="mt-5 mb-3">Vous souhaitez une pochette d'album pour version :</p>
@@ -154,29 +240,36 @@
 
             <div class="fond-form-10 container" id="fond-form-10">
                 <form id="form-10" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-10"></p>
                     <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group mt-5">
                         <p class="mt-5 mb-3">Pour quels réseaux sociaux avez-vous besoin d'un(e) header / bannière ?</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Facebook</label>
+                            <input name="network" class="form-check-input" type="checkbox" value="Facebook">
+                            <label class="form-check-label" for="network">Facebook</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Twitter</label>
+                            <input name="network" class="form-check-input" type="checkbox" value="Twitter">
+                            <label class="form-check-label" for="network">Twitter</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Instagram</label>
+                            <input name="network" class="form-check-input" type="checkbox" value="Instagram">
+                            <label class="form-check-label" for="network">Instagram</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Youtube</label>
+                            <input name="network" class="form-check-input" type="checkbox" value="Youtube">
+                            <label class="form-check-label" for="network">Youtube</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">LinkedIn</label>
+                            <input name="network" class="form-check-input" type="checkbox" value="LinkedIn">
+                            <label class="form-check-label" for="network">LinkedIn</label>
                         </div>
+                        <div class="form-check">
+                            <input name="network" class="form-check-input" type="checkbox" value="Autre" id="other">
+                            <label class="form-check-label" for="network">Autre</label>
+                        </div>
+                        <p id="social-network" class="mt-2 alert alert-danger">Vous devez selectionner au moins un réseau social</p>
                     </div>
                     <button id="btn-devis-10" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
                 </form>
@@ -184,22 +277,26 @@
 
             <div class="fond-form-11 container" id="fond-form-11">
                 <form id="form-11" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-11"></p>
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group">
                         <p class="mt-5 mb-3">Vous souhaitez :</p>
                         <label class="radio-inline m-3"><input class="m-3" type="radio" name="type" id="vitrine" required value="vitrine">Un site vitrine</label>
                         <label class="radio-inline m-3"><input class="m-3" type="radio" name="type" id="commerce" required value="commerce">Un site e-commerce</label>
                     </div>
-                    <button id="btn-devis-11" class="btn-devis btn bg-black text-white mt-5" type="submit">Suivant</button>
+                    <button id="btn-devis-11" class="btn-devis btn bg-black text-white mt-2" type="submit">Suivant</button>
                 </form>
             </div>
 
             <div class="fond-form-12 container" id="fond-form-12">
                 <form id="form-12" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-12"></p>
                     <small>Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group mt-5">
-                        <label for="exampleFormControlSelect1">Nombre de page(s)</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <label for="number-page">Nombre de page(s)</label>
+                        <select class="form-control" id="number-page">
                             <option>1 à 5 pages</option>
                             <option>5 à 10 pages</option>
                             <option>10 à 15 pages</option>
@@ -213,29 +310,32 @@
 
             <div class="fond-form-13 container" id="fond-form-13">
                 <form id="form-13" class="p-4">
+                    <p class="mt-2 choice">Vous avez choisi : </p>
+                    <p class="mt-3 mb-3" id="about-form-13"></p>
                     <small class="mt-3">Reseignez toutes les informations demandées pour obtenir votre devis</small>
                     <div class="form-group mt-5">
-                        <p class="mt-5 mb-3">Quelle(s) fonctionalités souhaitez-vous ?</p>
+                        <p class="mt-5 mb-3">Quelle(s) fonctionalités avez-vous besoin ?</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Barre de recherche</label>
+                            <input name="feature" class="form-check-input" type="checkbox" value="Barre de recherche">
+                            <label class="form-check-label" for="feature">Barre de recherche</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Caroussel / Slider</label>
+                            <input name="feature" class="form-check-input" type="checkbox" value="Caroussel / Slider">
+                            <label class="form-check-label" for="feature">Caroussel / Slider</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Carte Google Map</label>
+                            <input name="feature" class="form-check-input" type="checkbox" value="Carte Google Map">
+                            <label class="form-check-label" for="feature">Carte Google Map</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Formulaire de contact</label>
+                            <input name="feature" class="form-check-input" type="checkbox" value="Formulaire de contact">
+                            <label class="form-check-label" for="feature">Formulaire de contact</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Menu</label>
+                            <input name="feature" class="form-check-input" type="checkbox" value="Menu">
+                            <label class="form-check-label" for="feature">Menu</label>
                         </div>
+                        <p id="alert" class="mt-2 alert alert-danger">Vous devez selectionner au moins une fonctionnalité</p>
                     </div>
                     <button id="btn-devis-13" class="btn-devis btn bg-black text-white mt-3" type="submit">Suivant</button>
                 </form>

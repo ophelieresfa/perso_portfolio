@@ -107,14 +107,99 @@ class Quote {
         let datas = new FormData();
         let selectElem = document.getElementById('selection');
         let what = document.getElementById('what');
+        let markYes = document.getElementById("mark-yes");
+        let markNo = document.getElementById("mark-no");
+        let integrateYes = document.getElementById("integrate-yes");
+        let integrateNo = document.getElementById("integrate-no");
 
         selectElem.addEventListener('change', function () {
             let index = selectElem.selectedIndex;
             if (index === 7) {
                 what.style.display = "block";
+                backForm2.style.height = "34rem";
             }
             else {
                 what.style.display = "none";
+                backForm2.style.height = "26rem";
+            }
+        });
+
+        markYes.addEventListener('change', function () {
+            let divInfo = document.getElementById('mark-name');
+            let refonte = sessionStorage.getItem('Refonte / Création');
+
+            divInfo.style.display = "block";
+            backForm6.style.height = "126rem";
+
+            if (refonte === "refonte") {
+                backForm6.style.height = "138rem";
+            }
+
+            if (integrateYes.checked === true) {
+                backForm6.style.height = "134rem";
+                if (refonte === "refonte") {
+                    backForm6.style.height = "145rem";
+                }
+            }
+        });
+
+        markNo.addEventListener('change', function () {
+            let divInfo = document.getElementById('mark-name');
+            let refonte = sessionStorage.getItem('Refonte / Création');
+
+            if (integrateYes.checked === true) {
+                backForm6.style.height = "126rem";
+            }
+
+            if (refonte === "refonte") {
+                backForm6.style.height = "130rem";
+            }
+
+            divInfo.style.display = 'none';
+            backForm6.style.height = "119rem";
+        });
+
+        integrateYes.addEventListener('change', function () {
+            let divInfo = document.getElementById('what-integrate');
+            let refonte = sessionStorage.getItem('Refonte / Création');
+            let choice = selection.options[selection.selectedIndex].text;
+
+            divInfo.style.display = "block";
+            backForm6.style.height = "126rem";
+
+            if (refonte === "refonte") {
+                backForm6.style.height = "138rem";
+            }
+
+            if (markYes.checked === true) {
+                backForm6.style.height = "134rem";
+                if (refonte === "refonte") {
+                    backForm6.style.height = "145rem";
+                }
+            }
+
+            if (choice === "Affiche / Affiche publicitaire") {
+                backForm6.style.height = "105rem";
+            }
+
+        });
+
+        integrateNo.addEventListener('change', function () {
+            let divInfo = document.getElementById('what-integrate');
+            let refonte = sessionStorage.getItem('Refonte / Création');
+            let choice = selection.options[selection.selectedIndex].text;
+
+            divInfo.style.display = 'none';
+            backForm6.style.height = "119rem";
+            if (markYes.checked === true) {
+                backForm6.style.height = "126rem";
+            }
+            if (refonte === "refonte") {
+                backForm6.style.height = "130rem";
+            }
+
+            if (choice === "Affiche / Affiche publicitaire") {
+                backForm6.style.height = "98rem";
             }
         });
 
@@ -127,6 +212,8 @@ class Quote {
             if (name !== "") {
                 if (firstname !== "") {
                     if (email !== "") {
+                        let index = selectElem.selectedIndex;
+
                         datas.append("name", name);
                         datas.append("firstname", firstname);
                         datas.append("email", email);
@@ -141,6 +228,15 @@ class Quote {
 
                         backForm1.style.display = "none";
                         backForm2.style.display = "block";
+                        backForm2.style.height = "26rem";
+
+                        if (index === 7) {
+                            what.style.display = "block";
+                            backForm2.style.height = "34rem";
+                        }
+                        else {
+                            what.style.display = "none";
+                        }
 
                         function strUcFirst(a){
                             return (a+'').charAt(0).toUpperCase()+a.substr(1);
@@ -156,6 +252,7 @@ class Quote {
             let selection = document.getElementById("selection");
             let choice = selection.options[selection.selectedIndex].text;
             let about = selection.options[selection.selectedIndex].text;
+            let whatVal = document.getElementById("what-value").value;
 
             if (choice !== "") {
                 datas.append("about", about);
@@ -166,44 +263,122 @@ class Quote {
 
                 sessionStorage.setItem('About', about);
             }
+
             if (choice === "Logo") {
+                let aboutChoice = document.getElementById("about-form-3");
+                let refonte = document.getElementById("ref");
+                let creation = document.getElementById("crea");
+
                 backForm2.style.display = "none";
                 backForm3.style.display = "block";
+
+                backForm3.style.height = "34rem";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+                refonte.innerHTML = "Refonte d'un " + choice +  " déjà existant";
+                creation.innerHTML = "Création d'un nouveau " + choice;
+
+                if (refonte.onchange === true) {
+                    let select = document.getElementById("select-file");
+                    select.style.display = "block";
+                }
+
             }
 
             if (choice === "Carte de visite") {
+                let aboutChoice = document.getElementById("about-form-7");
+                let rectoChoice = document.getElementById("rec");
+
                 backForm2.style.display = "none";
                 backForm7.style.display = "block";
+                backForm7.style.height = "35rem";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+                rectoChoice.innerHTML = "Vous souhaitez votre " + choice + " :";
             }
 
             if (choice === "Affiche / Affiche publicitaire") {
+                let aboutChoice = document.getElementById("about-form-7");
+                let rectoChoice = document.getElementById("rec");
+
                 backForm2.style.display = "none";
                 backForm7.style.display = "block";
+                backForm7.style.height = "35rem";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+                rectoChoice.innerHTML = "Vous souhaitez votre " + choice + " :";
             }
 
             if (choice === "Pochette d'album") {
+                let aboutChoice = document.getElementById("about-form-9");
+
                 backForm2.style.display = "none";
                 backForm9.style.display = "block";
+                backForm9.style.height = "35rem";
+
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
 
             if (choice === "Header / Bannière") {
+                let aboutChoice = document.getElementById("about-form-10");
+
                 backForm2.style.display = "none";
                 backForm10.style.display = "block";
+                backForm10.style.height = "35rem";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
 
             if (choice === "Curriculum Vitae") {
+                let aboutChoice = document.getElementById("about-form-5");
+
                 backForm2.style.display = "none";
                 backForm5.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
 
             if (choice === "Autre") {
-               backForm2.style.display = "none";
-                backForm5.style.display = "block";
+                if (whatVal !== "") {
+                    let aboutChoice = document.getElementById("about-form-5");
+
+                    datas.append("Quoi", whatVal);
+
+                    ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                        console.log("Quoi = " + whatVal);
+                    });
+
+                    sessionStorage.setItem('Quoi', whatVal);
+
+                    backForm2.style.display = "none";
+                    backForm5.style.display = "block";
+
+                    aboutChoice.innerHTML = choice + ": " + whatVal;
+                    aboutChoice.style.textDecoration = "underline 1px black";
+                }
             }
 
             if (choice === "Site internet") {
+                let aboutChoice = document.getElementById("about-form-11");
+                let refonte = document.getElementById("ref");
+                let creation = document.getElementById("crea");
+
                 backForm2.style.display = "none";
-                backForm11.style.display = "block";
+                backForm3.style.display = "block";
+
+                backForm3.style.height = "35rem";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+                refonte.innerHTML = "Refonte d'un " + choice +  " déjà existant";
+                creation.innerHTML = "Création d'un nouveau " + choice;
             }
 
         });
@@ -211,31 +386,61 @@ class Quote {
         button_3.addEventListener('click', function () {
             let selection = document.getElementById("selection");
             let choice = selection.options[selection.selectedIndex].text;
-            let about_id = document.getElementById("about");
             let quality = document.getElementById("quality");
             let refonte = document.getElementById("refonte");
             let creation = document.getElementById("creation");
+            let refCrea = document.querySelector('input[name=creation]:checked').value;
 
             if ((refonte.checked === true) || (creation.checked === true)) {
                 if  (choice !== "Curriculum Vitae" && choice !== "Site internet") {
+                    let aboutChoice = document.getElementById("about-form-4");
+
+                    datas.append("Refonte / Création", refCrea);
+
+                    ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                        console.log("Refonte / Création = " + refCrea);
+                    });
+
+                    sessionStorage.setItem('Refonte / Création', refCrea);
+
                     backForm3.style.display = "none";
                     backForm4.style.display = "block";
+                    backForm4.style.height = "35rem";
 
-                    about_id.innerText = choice;
+                    aboutChoice.innerHTML = choice;
+                    aboutChoice.style.textDecoration = "underline 1px black";
                     quality.innerText = "Souhaitez-vous votre " + choice + " au format vectoriel ?";
                 }
                 else {
-                    backForm2.style.display = "none";
-                    backForm5.style.display = "block";
+                    datas.append("Refonte / Création", refCrea);
+
+                    ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                        console.log("Refonte / Création = " + refCrea);
+                    });
+
+                    sessionStorage.setItem('Refonte / Création', refCrea);
+
+                    if (choice === "Logo") {
+                        backForm3.style.display = "none";
+                        backForm5.style.display = "block";
+                    }
+
+                    else {
+                        backForm3.style.display = "none";
+                        backForm11.style.display = "block";
+                    }
                 }
             }
         });
 
         button_4.addEventListener('click', function () {
+            let selection = document.getElementById("selection");
+            let choice = selection.options[selection.selectedIndex].text;
             let quality = document.querySelector('input[name=quality]:checked').value;
             let checked = document.getElementsByName("quality").value;
 
             if (checked !== "") {
+                let aboutChoice = document.getElementById("about-form-5");
 
                 datas.append("Vector", quality);
 
@@ -247,28 +452,273 @@ class Quote {
 
                 backForm4.style.display = "none";
                 backForm5.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
         });
 
-         button_5.addEventListener('click', function () {
+        button_5.addEventListener('click', function () {
+             let selection = document.getElementById("selection");
+             let choice = selection.options[selection.selectedIndex].text;
              let budget = document.getElementById('budget').value;
+             let aboutChoice = document.getElementById("about-form-6");
+             let whatVal = document.getElementById("what-value").value;
+             let refonte = sessionStorage.getItem('Refonte / Création');
+             let displayMark = document.getElementById("display-mark");
+             let integrate = document.getElementById("integrate");
+             let date = new Date(new Date().getTime()+(4*24*60*60*1000)).toISOString().split('T')[0];
+             let dateText = document.getElementById("date");
+             let nameMark = document.getElementById("mark-name");
+             let identity = document.getElementById("identity");
+             let colors = document.getElementById("colors");
 
-             if (budget !== "") {
-                 datas.append("budget", budget);
-                 ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
-                     console.log("Budget = " + budget);
-                 });
+            if (budget !== "") {
+                datas.append("budget", budget);
+                backForm6.style.height = "119rem";
 
-                 sessionStorage.setItem('Budget', budget);
+                if (choice === "Logo") {
+                    displayMark.innerHTML = "Souhaitez-vous que le nom de la marque apparaisse sur le " + choice + " ?*";
+                    integrate.innerHTML = "Faut-il intégrer des éléments particuliers dans le " + choice + "?";
 
-                 backForm5.style.display = "none";
-                 backForm6.style.display = "block";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + choice;
+                    if (markYes.checked === true) {
+                        let divInfo = document.getElementById('mark-name');
+                        divInfo.style.display = "block";
+                        backForm6.style.height = "126rem";
+                    }
+
+                    if (integrateYes.checked === true) {
+                        let divInfo = document.getElementById('what-integrate');
+                        divInfo.style.display = "block";
+                        backForm6.style.height = "126rem";
+                    }
+
+                    if ((markYes.checked === true) && (integrateYes.checked === true)) {
+                        backForm6.style.height = "134rem";
+                    }
+
+                    if ((markYes.checked === false) && (integrateYes.checked === true)) {
+                        backForm6.style.height = "126rem";
+                    }
+
+                    ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                        console.log("Budget = " + budget);
+                    });
+
+                    sessionStorage.setItem('Budget', budget);
+
+                    document.getElementsByName("party")[0].setAttribute('min', date);
+
+
+                    if (refonte === "refonte") {
+                        let divKeep = document.getElementById('keep');
+
+                        divKeep.style.display = "block";
+                        backForm6.style.height = "130rem";
+
+                        if (markYes.checked === true) {
+                            backForm6.style.height = "138rem";
+                        }
+                        if (integrateYes.checked === true) {
+                            backForm6.style.height = "138rem";
+                        }
+
+                        if ((markYes.checked === true) && (integrateYes.checked === true)) {
+                            backForm6.style.height = "145rem";
+                        }
+                    }
+                }
+
+                if (choice === "Carte de visite") {
+                    displayMark.innerHTML = "Souhaitez-vous que le nom de la marque apparaisse sur la " + choice + " ?*";
+                    integrate.innerHTML = "Faut-il intégrer des éléments particuliers dans la " + choice + "?";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + choice;
+                }
+
+                if (choice === "Affiche / Affiche publicitaire") {
+                    backForm6.style.height = "98rem";
+                    nameMark.style.display = "none";
+                    identity.style.display = "none";
+                    colors.style.marginTop = "3rem";
+                    dateText.style.marginBottom = "1rem";
+
+                    integrate.innerHTML = "Faut-il intégrer des éléments particuliers dans l' " + choice + "?";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + choice;
+                }
+
+                if (choice === "Pochette d'album") {
+                    displayMark.innerHTML = "Souhaitez-vous que le nom de l'album apparaisse sur la " + choice + " ?*";
+                    integrate.innerHTML = "Faut-il intégrer des éléments particuliers dans la " + choice + "?";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + choice;
+
+                }
+
+                if (choice === "Header / Bannière") {
+                    displayMark.innerHTML = "Souhaitez-vous que le nom de la marque apparaisse sur le /la " + choice + " ?*";
+                    integrate.innerHTML = "Faut-il intégrer des éléments particuliers dans le/la  " + choice + "?";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + choice;
+
+                }
+
+                if (choice === "Curriculum Vitae") {
+                    backForm5.style.display = "none";
+                    backFormlast.style.display = "block";
+                }
+
+                else {
+                    backForm5.style.display = "none";
+                    backForm6.style.display = "block";
+
+                    aboutChoice.innerHTML = choice;
+                    aboutChoice.style.textDecoration = "underline 1px black";
+                }
+
+                if (choice === "Autre") {
+                    nameMark.style.display = "none";
+                    colors.style.marginTop = "3rem";
+
+                    aboutChoice.innerHTML = choice + ": " + whatVal;
+                    integrate.innerHTML = "Faut-il intégrer des éléments particuliers dans votre " + whatVal + "?";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + whatVal;
+                }
+
+                if (choice === "Site internet") {
+                    let integrate = document.getElementById("integrate-part");
+                    let need = document.getElementById("need");
+                    let date = new Date(new Date().getTime()+(15*24*60*60*1000)).toISOString().split('T')[0];
+                    integrate.style.display = "none";
+                    nameMark.style.display = "none";
+                    colors.style.marginTop = "3rem";
+
+                    document.getElementsByName("party")[0].setAttribute('min', date);
+
+                    dateText.style.marginTop = "3rem";
+                    dateText.innerHTML = "Sélectionner la date maximale à laquelle vous souhaitez recevoir votre " + choice;
+                    need.innerHTML = "Avez-vous besoin d'un logo ?";
+
+                }
+
              }
          });
 
         button_6.addEventListener('click', function () {
+            let activity = document.getElementById("activity").value;
+            let markYes = document.getElementById("mark-yes");
+            let markNo = document.getElementById("mark-no");
+            let keepYes = document.getElementById("keep-yes");
+            let keepNo = document.getElementById("keep-no");
+            let integrateYes = document.getElementById("integrate-yes");
+            let integrateNo = document.getElementById("integrate-no");
+            let integrate = document.querySelector('input[name=integrate]:checked').value;
+            let identityYes = document.getElementById("identity-yes");
+            let identityNo = document.getElementById("identity-no");
+            let siteYes = document.getElementById("site-yes");
+            let siteNo = document.getElementById("site-no");
+            let textColor = [];
+            let colors = document.querySelectorAll('input[name=textcolor]');
+            let date = document.getElementById("party").value;
+            let refonte = sessionStorage.getItem('Refonte / Création');
+
+            if (activity !== "") {
+                datas.append("Activity", activity);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Activity = " + activity);
+                });
+
+                sessionStorage.setItem('Activity', activity);
+            }
+
+            if ((markYes.checked === true) || (markNo.checked === true)) {
+                let mark = document.querySelector('input[name=mark]:checked').value;
+
+                datas.append("Mark", mark);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Mark = " + mark);
+                });
+
+                sessionStorage.setItem('Mark', mark);
+            }
+
+            for (let i = 0; i < colors.length; i++) {
+                textColor.push(colors[i].value)
+            }
+
+            if (colors.length !== 0) {
+                datas.append("Colors", textColor);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Colors = " + textColor);
+                });
+
+                sessionStorage.setItem('Colors', textColor);
+            }
+
+            if ((integrateYes.checked === true) || (integrateNo.checked === true)) {
+
+                datas.append("Integrate", integrate);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Integrate = " + integrate);
+                });
+
+                sessionStorage.setItem('Integrate', integrate);
+            }
+
+            datas.append("Date", date);
+
+            ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                console.log("Date = " + date);
+            });
+
+            sessionStorage.setItem('Date', date);
+
+            if ((identityYes.checked === true) || (identityNo.checked === true)) {
+                let identity = document.querySelector('input[name=identity]:checked').value;
+
+                datas.append("Identity", identity);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Identity = " + identity);
+                });
+
+                sessionStorage.setItem('Identity', identity);
+            }
+
+            if ((siteYes.checked === true) || (siteNo.checked === true)) {
+                let site = document.querySelector('input[name=site]:checked').value;
+
+                datas.append("Site internet", site);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Site internet = " + site);
+                });
+
+                sessionStorage.setItem('Site internet', site);
+            }
+
+            if (refonte === "refonte") {
+                if ((keepYes.checked === true) || (keepNo.checked === true)) {
+                    let keep = document.querySelector('input[name=keep]:checked').value;
+
+                    datas.append("Keep", keep);
+
+                    ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                        console.log("Keep = " + keep);
+                    });
+
+                    sessionStorage.setItem('Keep', keep);
+
+                    backForm6.style.display = "none";
+                    backFormlast.style.display = "block";
+                }
+            }
+
             backForm6.style.display = "none";
             backFormlast.style.display = "block";
+
         });
 
         button_7.addEventListener('click', function () {
@@ -276,56 +726,196 @@ class Quote {
             let rectoverso = document.getElementById("rectoverso");
             let selection = document.getElementById("selection");
             let choice = selection.options[selection.selectedIndex].text;
+            let aboutChoice = document.getElementById("about-form-5");
+            let rectoVerso = document.querySelector('input[name=recto]:checked').value;
+
+            datas.append("Recto", rectoVerso);
+
+            ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                console.log("Recto = " + rectoVerso);
+            });
+
+            sessionStorage.setItem('Recto', rectoVerso);
 
             if ((recto.checked === true) || (rectoverso.checked === true)) {
+
                 backForm7.style.display = "none";
                 backForm5.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
 
             if (choice === "Affiche / Affiche publicitaire") {
+                let aboutChoice = document.getElementById("about-form-8");
+
                 backForm5.style.display = "none";
                 backForm8.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
         });
 
         button_8.addEventListener('click', function () {
-            backForm8.style.display = "none";
-            backForm5.style.display = "block";
+            let unity = document.getElementById('unity').value;
+
+            if (unity !== "") {
+                datas.append("Unity", unity);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Unity = " + unity);
+                });
+
+                sessionStorage.setItem('Unity', unity);
+
+                backForm8.style.display = "none";
+                backForm5.style.display = "block";
+            }
         });
 
         button_9.addEventListener('click', function () {
             let numerique = document.getElementById("numerique");
             let papier = document.getElementById("papier");
+            let selection = document.getElementById("selection");
+            let choice = selection.options[selection.selectedIndex].text;
+            let aboutChoice = document.getElementById("about-form-7");
+            let version = document.querySelector('input[name=version]:checked').value;
+            let rectoChoice = document.getElementById("rec");
 
             if ((numerique.checked === true) || (papier.checked === true)) {
+
+                datas.append("Version", version);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Version = " + version);
+                });
+
+                sessionStorage.setItem('Version', version);
+
                 backForm9.style.display = "none";
                 backForm7.style.display = "block";
+                backForm7.style.height = "35rem";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+                rectoChoice.innerHTML = "Vous souhaitez votre " + choice + " :";
             }
         });
 
         button_10.addEventListener('click', function () {
+            let selection = document.getElementById("selection");
+            let choice = selection.options[selection.selectedIndex].text;
+            let aboutChoice = document.getElementById("about-form-5");
+            let network = [];
+            let checkboxes = document.querySelectorAll('input[name=network]:checked');
+            let alert = document.getElementById("social-network");
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                network.push(checkboxes[i].value)
+            }
+
+            if (checkboxes.length !== 0) {
+                datas.append("Réseaux Sociaux", network);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Réseaux Sociaux = " + network);
+                });
+
+                sessionStorage.setItem('Réseaux Sociaux', network);
+
                 backForm10.style.display = "none";
                 backForm5.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+            }
+
+            else {
+                backForm10.style.height = "37rem";
+                alert.style.display = "block";
+            }
         });
 
         button_11.addEventListener('click', function () {
             let vitrine = document.getElementById("vitrine");
             let commerce = document.getElementById("commerce");
+            let selection = document.getElementById("selection");
+            let choice = selection.options[selection.selectedIndex].text;
+            let aboutChoice = document.getElementById("about-form-12");
+            let type = document.querySelector('input[name=type]:checked').value;
+
 
             if ((vitrine.checked === true) || (commerce.checked === true)) {
+                datas.append("Type Site", type);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Type Site = " + type);
+                });
+
+                sessionStorage.setItem('Type Site', type);
+
                 backForm11.style.display = "none";
                 backForm12.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
             }
         });
 
         button_12.addEventListener('click', function () {
-                backForm12.style.display = "none";
-                backForm13.style.display = "block";
+            let selection = document.getElementById("selection");
+            let choice = selection.options[selection.selectedIndex].text;
+            let aboutChoice = document.getElementById("about-form-13");
+            let selectElem = document.getElementById('number-page');
+            let numberPages = selectElem.options[selectElem.selectedIndex].text;
+
+            datas.append("Number Pages", numberPages);
+
+            ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                console.log("Number Pages = " + numberPages);
+            });
+
+            sessionStorage.setItem('Number Pages', numberPages);
+
+            backForm12.style.display = "none";
+            backForm13.style.display = "block";
+
+            aboutChoice.innerHTML = choice;
+            aboutChoice.style.textDecoration = "underline 1px black";
         });
 
         button_13.addEventListener('click', function () {
-            backForm13.style.display = "none";
-            backForm5.style.display = "block";
+            let selection = document.getElementById("selection");
+            let choice = selection.options[selection.selectedIndex].text;
+            let aboutChoice = document.getElementById("about-form-5");
+            let feature = [];
+            let checkboxes = document.querySelectorAll('input[name=feature]:checked');
+            let alert = document.getElementById("alert");
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                feature.push(checkboxes[i].value)
+            }
+
+            if (checkboxes.length !== 0) {
+                datas.append("Fonctionnalité(s)", feature);
+
+                ajaxPost("http://localhost:8080/perso_portfolio/public/index.php?action=quote", datas, function () {
+                    console.log("Fonctionnalité(s) = " + feature);
+                });
+
+                sessionStorage.setItem('Fonctionnalité(s)', feature);
+
+                backForm13.style.display = "none";
+                backForm5.style.display = "block";
+
+                aboutChoice.innerHTML = choice;
+                aboutChoice.style.textDecoration = "underline 1px black";
+            }
+            else {
+                backForm13.style.height = "37rem";
+                alert.style.display = "block";
+            }
         });
     }
 

@@ -36,13 +36,6 @@ input::-webkit-outer-spin-button {
     margin:0;
 }
 
-/* Opéra*/
-input::-o-inner-spin-button,
-input::-o-outer-spin-button {
-    -o-appearance: none;
-    margin:0
-}
-
 /* Properties for Header */
 
 header h1 {
@@ -234,6 +227,60 @@ main p {
 
 .what {
     display: none;
+}
+
+.choice,
+#about-form-3,
+#about-form-4,
+#about-form-5,
+#about-form-6,
+#about-form-7,
+#about-form-8,
+#about-form-9,
+#about-form-10,
+#about-form-11,
+#about-form-12,
+#about-form-13 {
+    color: #7c003c;
+}
+
+#what-integrate,
+#keep,
+#alert,
+#social-network {
+    display: none;
+}
+
+.mark-name {
+    display: none;
+}
+
+.color {
+    display: flex;
+    width: 100%;
+    padding-top: .5rem;
+}
+
+.site input,
+.identity input,
+.integrate input,
+.keep input,
+.quality input,
+.creation input,
+.selection select,
+.name-mark input,
+.color input {
+    cursor: pointer;
+}
+
+#ref,
+#crea {
+    width: 60%;
+}
+
+.please {
+    font-size: .8rem;
+    font-weight: bold;
 }
 
 /* Properties for screen with min-width 576px */
