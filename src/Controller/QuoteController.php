@@ -13,21 +13,17 @@ class QuoteController extends MainController
 
     public function dataMethod()
     {
-        $name = $_POST["name"];
-        $firstname = $_POST["firstname"];
-        $email = $_POST["email"];
-        $about = $_POST["about"];
-        $quality = $_POST["vector"];
-        $budget = $_POST['budget'];
-
-        echo $name . " " . $firstname . " " . $email . " " . $about . " " . $quality . " " . $budget;
-
         if (!empty($_POST)) {
             $data['name'] = $_POST['name'];
             $data['firstname'] = $_POST['firstname'];
             $data['email'] = $_POST['email'];
-            $data['about'] = $_POST['about'];
-            $data['vector'] = $_POST['vector'];
+            $data['choice'] = $_POST['choice'];
+            $data['refcrea'] = $_POST['refcrea'];
+            $data['vectoriel'] = $_POST['vectoriel'];
+            $data['version'] = $_POST['version'];
+            $data['recto'] = $_POST['recto'];
+            $data['unity'] = $_POST['unity'];
+            $data['network'] = $_POST['network'];
             $data['budget'] = $_POST['budget'];
 
             ModelFactory::getModel('Quote')->createData($data);

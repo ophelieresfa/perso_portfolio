@@ -268,7 +268,7 @@ main p {
 .quality input,
 .creation input,
 .selection select,
-.name-mark input,
+.mark-display input,
 .color input {
     cursor: pointer;
 }
@@ -283,6 +283,10 @@ main p {
     font-weight: bold;
 }
 
+.file,
+.url {
+    display: none;
+}
 /* Properties for screen with min-width 576px */
 
 @media screen and (min-width: 576px) {
